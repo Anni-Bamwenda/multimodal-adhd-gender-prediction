@@ -1,7 +1,7 @@
-# Multimodal Prediction of ADHD Outcome and Sex
+# Multimodal Prediction of ADHD Outcome and Gender
 
 ## Overview
-This project implements an end-to-end machine learning system for jointly predicting ADHD diagnosis and sex using heterogeneous data sources, including socio-demographic metadata and functional brain imaging features.  
+This project implements an end-to-end machine learning system for jointly predicting ADHD diagnosis and gender using heterogeneous data sources, including socio-demographic metadata and functional brain imaging features.  
 
 The goal of this project is to understand which **brain activity patterns are associated with ADHD** and whether these patterns differ between males and females.  
 
@@ -16,7 +16,7 @@ The implementation of this project  emphasizes reliable pipeline design, evaluat
 The task is formulated as a multi-output classification problem, where two correlated targets must be predicted simultaneously:
 
 - ADHD diagnosis (binary)
-- Sex (binary)
+- Male/Female Gender (binary)
 
 Key challenges in this dataset include:
 
@@ -52,7 +52,7 @@ Each stage is implemented as a modular component to support clarity, reproducibi
 Random Forests were selected to balance interpretability, robustness to mixed feature types, and performance on limited sample sizes, while avoiding the overfitting risk of more complex architectures.
 
 **Multi-output learning:**  
-Joint prediction was used to capture correlations between ADHD diagnosis and sex within a single, unified training pipeline.
+Joint prediction was used to capture correlations between ADHD diagnosis and gender within a single, unified training pipeline.
 
 **Feature engineering strategy:**  
 Preprocessing was applied per modality to avoid leaking assumptions across heterogeneous data sources and to preserve signal integrity.
@@ -78,7 +78,7 @@ These tradeoffs were accepted to ensure reliable baseline behavior under real-wo
 **Please note that Raw TRAIN and TEST data are **not included** in this repository due to size constraints. 
 They can be downloaded [here](https://www.kaggle.com/competitions/widsdatathon2025/data).
 ```
-multimodal-adhd-sex-prediction/
+multimodal-adhd-gender-prediction/
 ├── notebooks/          # Exploratory analysis and prototyping
 ├── src/                # Modular pipeline implementation
 │   ├── preprocess.py
